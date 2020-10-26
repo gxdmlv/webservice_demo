@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cxf="http://cxf.apache.org/core"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://cxf.apache.org/core
+        http://cxf.apache.org/schemas/core.xsd
+        http://cxf.apache.org/jaxws
+        http://cxf.apache.org/schemas/jaxws.xsd
+        http://cxf.apache.org/jaxrs
+        http://cxf.apache.org/schemas/jaxrs.xsd
+        ">
+
+
+<!--    <bean id="jsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider">-->
+<!--        <property name="dropRootElement" value="true"/>-->
+<!--        <property name="dropCollectionWrapperElement" value="true"/>-->
+<!--        <property name="serializeAsArray" value="true"/>-->
+<!--    </bean>-->
+<!-- 加载服务service实现类到Spring容器中-->
+    <!--此处的address就是基础访问路径，和服务接口中的@Path("/userService")效果相同-->
+    <jaxrs:server address="/userService" serviceClass="com.gx.service.impl.UserServiceImpl">
+<!--        <jaxrs:providers>-->
+<!--            <ref bean="jsonProvider"/>-->
+<!--        </jaxrs:providers>-->
+    </jaxrs:server>
+
+
+
+</beans>
