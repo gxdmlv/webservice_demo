@@ -16,17 +16,17 @@
         ">
 
 
-<!--    <bean id="jsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider">-->
-<!--        <property name="dropRootElement" value="true"/>-->
-<!--        <property name="dropCollectionWrapperElement" value="true"/>-->
-<!--        <property name="serializeAsArray" value="true"/>-->
-<!--    </bean>-->
+    <bean id="jsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider">
+        <property name="dropRootElement" value="true"/>
+        <property name="dropCollectionWrapperElement" value="true"/>
+        <property name="serializeAsArray" value="true"/>
+    </bean>
 <!-- 加载服务service实现类到Spring容器中-->
     <!--此处的address就是基础访问路径，和服务接口中的@Path("/userService")效果相同-->
     <jaxrs:server address="/userService" serviceClass="com.gx.service.impl.UserServiceImpl">
-<!--        <jaxrs:providers>-->
-<!--            <ref bean="jsonProvider"/>-->
-<!--        </jaxrs:providers>-->
+        <jaxrs:providers>
+            <ref bean="jsonProvider"/>
+        </jaxrs:providers>
     </jaxrs:server>
 
 

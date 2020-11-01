@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @createDate 2020/10/25 13:29
  * @auth gx
  */
-@XmlRootElement(name = "Car")
+//@XmlRootElement
 public class Car {
 
     private Integer id;

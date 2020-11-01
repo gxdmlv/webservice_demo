@@ -2,10 +2,8 @@ package com.gx;
 
 import com.gx.pojo.User;
 import org.apache.cxf.jaxrs.client.WebClient;
-import org.apache.cxf.jaxrs.provider.json.JSONProvider;
 
 import javax.ws.rs.core.MediaType;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

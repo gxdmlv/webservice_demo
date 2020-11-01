@@ -8,13 +8,12 @@ import java.util.List;
  * @createDate 2020/10/25 13:27
  * @auth gx
  */
-@XmlRootElement(name = "User")
+//@XmlRootElement
 public class User {
 
     private Integer id;
     private String username;
     private String city;
-
     private List<Car> cars = new ArrayList<Car>();
 
     public Integer getId() {
